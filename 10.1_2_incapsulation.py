@@ -1,9 +1,19 @@
 # 10.1_2_incapsulation Инкапсуляция
 
 ''''
+
+@property @hidden_num_1.setter. В общем property и setter это забронированные слова-декораторы.
+@staticmethod и @classmethod
+Декоратор @property облегчает создание свойств в классах Python.
+Свойства выглядят как обычные атрибуты (поля) класса,
+но при их чтении вызывается геттер (getter),
+при записи – сеттер (setter),
+а при удалении – делитер (deleter). Геттер и делитер опциональны.
+
+
+
 Скопировал сюда игру Dice
 Инкапсу-ия будет в том, что я скрою параметр  hidden_num_1 и hidden_num_2
-
 
 Добавлю функцию: сменить загаданные числа  def change_dices(self):
 
@@ -28,10 +38,10 @@ class Dice_incapsulation:
         self.__hidden_num_2 = random.randint(1, 6)
 
     def set_dice1(self, dice): # вручную буду менть значения
-        #if (dice > 0) & (dice < 7) # мы зачем то это написали но реализовывать не будем
+        #if (dice > 0) & (dice < 7) # мы зачем то это написали но реализовывать не будем??
         self.__hidden_num_1 = dice
 
-    def get_dice1(self):
+    def get_dice1(self): # и еще это дописали.. зачем?
         #if (dice > 0) & (dice < 7)
         return self.__hidden_num_1
 
@@ -92,9 +102,9 @@ class Dice_incapsulation:
 
 
 if __name__ == "__main__": # Что это???
-    dice_game = Dice_incapsulation(2)
+    dice_game = Dice_incapsulation(5)
     dice_game.set_hidden_numbers()
-    print(dir(dice_game)) # т.к. следующая строка ругается, мы просто можем посмотреть все , что есть методом dir
+    # print(dir(dice_game)) # т.к. следующая строка ругается, мы просто можем посмотреть все , что есть методом dir
     # dice_game.__throw_dices() # так нас наругает комп, т.к. мы вызываем скрытую функцию
 
 #    print(dice_game.__hidden_num_1, dice_game.__hidden_num_2) # я закоментил, т.к. две земли не дают пользоваться и нужно пользоваться методами get
@@ -104,9 +114,9 @@ if __name__ == "__main__": # Что это???
     # как к атрибуту, при этом вызывается функйия и возвращает значение, которое она возвращает
 
     # dice_game.set_dice1(5) # вручную пробуем менять параметры. Попробовать работу с этим и без этого метода
-    dice_game.hidden_num_1 = 5
+    #dice_game.hidden_num_1 = 5
     # dice_game.set_dice2(4)
-    dice_game.hidden_num_2 = 4
+    #dice_game.hidden_num_2 = 4
 
     # print(dice_game.get_dice1(), dice_game.get_dice2())
     print(dice_game.hidden_num_1, dice_game.hidden_num_2)
