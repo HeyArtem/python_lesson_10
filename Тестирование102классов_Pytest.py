@@ -84,7 +84,7 @@ class Dice_incapsulation:
 
             raise Exception("Вы превысили количество попыток! ")
 
-        if {dice_1,dice_2} == {self._hidden_num_1, self._hidden_num_2}: # Почему оформлено, как множество (только уникальные элементы?)
+        if {dice_1,dice_2} == {self.__hidden_num_1, self.__hidden_num_2}:
             return True
         else:
             return False
@@ -109,7 +109,7 @@ if __name__ == "__main__":
     # как к атрибуту, при этом вызывается функйия и возвращает значение, которое она возвращает
 
     # dice_game.set_dice1(5) # вручную пробуем менять параметры. Попробовать работу с этим и без этого метода
-    dice_game.hidden_num_1 = 7
+    dice_game.hidden_num_1 = 5
     # dice_game.set_dice2(4)
     dice_game.hidden_num_2 = 4
 
