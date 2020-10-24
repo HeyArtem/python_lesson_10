@@ -8,7 +8,7 @@ class Dice:
         что бы угадать комбинацию игрока "Компьютер"
         '''
         self.throw_num = N
-        self.current_throw = 0 # Параметр отвечает за количество совершенных бросков
+        self.current_throw = 0 # Счетчик количества совершенных бросков
 
     def set_hidden_numbers(self):  # Это сколько выпало у компьютерра?
         '''
@@ -47,12 +47,12 @@ class Dice:
         else:
             return False
 
-if __name__ == "__main__": # Что это???
+if __name__ == "__main__":
     dice_game = Dice(10)
     dice_game.set_hidden_numbers()
     print('Игрок "Компьютер" (_hidden_num_1 и_hidden_num_2) : ', dice_game._hidden_num_1, dice_game._hidden_num_2)
 
-    for i in range(2):
+    for i in range(3):
         '''
         Здесь мы указываем, сколько можно сделать попыток игроку "Игрок-1".
         И если это количество будет больше разрешенного, 
