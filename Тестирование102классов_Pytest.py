@@ -90,9 +90,9 @@ class Dice_incapsulation:
             return False
 
 
-    def __throw_dices(self):  # просто, как пример скрытой функции
-        pass
-
+    # def __throw_dices(self):  # просто, как пример скрытой функции
+    #     pass
+''' Я закометил, т.к. она не нужна и в теме 10.4 coverage test она нам добавляет в результаты строчки '''
 
 
 
