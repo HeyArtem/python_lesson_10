@@ -6,7 +6,7 @@
 
 
 Артем!!! Запомни сколько ты потерял часов, пока вспомнил, 
-что страница должна называться со слова test и в терминале писать слово pytest
+что страница должна называться со слова !!!test  тестируемая функция со слова test и в терминале писать слово pytest!!!
 
 '''
 
@@ -82,6 +82,7 @@ class TestDice: # когда пишем урок incapsulation изменили 
             Так же мы можем написать в место ValueError -> TypError и тест будет провален 
             '''
             self.dice_game.hidden_num_1 = 200000 # ну не работает!!
+
     def test_throw_dices(self):
         '''
         Тест 5
@@ -91,6 +92,21 @@ class TestDice: # когда пишем урок incapsulation изменили 
         self.dice_game.set_hidden_numbers()
         self.dice_game.throw_dices() # это бросили кости
         assert self.dice_game.current_throw == 1
+
+
+
+
+
+
+    def test_change_dices(self):
+        ''' дописали во время 10.4 coversge(покрытие тастами)'''
+        self.dice_game.set_hidden_numbers()
+        dice1 = self.dice_game.hidden_num_1
+        dice2 = self.dice_game.hidden_num_2
+
+        self.dice_game.change_dices()
+        assert {dice1,dice2} != {self.dice_game.hidden_num_1, self.dice_game.hidden_num_2}
+
 
 
 
