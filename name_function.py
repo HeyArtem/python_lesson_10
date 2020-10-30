@@ -22,10 +22,20 @@
 Сделаем это так, чтобы она перестала работать с полными именами из двух компонентов. 
 Заменим содержимое файла name_function.py следующим кодом:
 '''
-def get_formatted_name(first, middle, last):
+def get_formatted_name(first, middle, last=''):
     """
     Строит отформатированное полное имя.
     Эта версия должна работать для полных имен из трех компонентов.
     """
-    full_name = f"{first} {middle} {last}" # добавили второе имя
+    if middle:
+        full_name = f"{first} {middle} {last}" # добавили второе имя
+    else:
+        full_name = f"{first}{last}"
     return full_name.title()
+
+# name_2_good = get_formatted_name('соНЯ', 'заБИЯкИНА', 'влаДИмирОВна')
+# print(name_2_good)
+#
+# name_3_good = get_formatted_name('фЕрДинАНт', 'бЕКкеР')
+# print(name_3_good)
+
