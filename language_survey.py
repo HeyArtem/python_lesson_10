@@ -1,5 +1,6 @@
 ''''
 Изучаю pytest от Эльдара ч.5
+Напишем программу, которая использует класс AnonymousSurvey:
 '''
 
 from survey import AnonymousSurvey
@@ -18,5 +19,5 @@ while True:
     my_survey.store_response(response)
 
 # Вывод результатов опроса.
-print("\nThank you to everyone who participated in the survey!")
+print("\nThank you to everyone who participated in the survey!\nСпасибо всем, кто принял участие в опросе!")
 my_survey.show_results()
