@@ -21,7 +21,7 @@ class AnonymousSurvey():
 
     def show_results(self):  # метод вывода всех ответов, хранящихся в списке
         """Выводит все полученные ответы."""
-        print("Survey results:")
+        print("Survey results\nРезультаты опроса:")
         for response in self.responses:
             print(f"- {response}")
 
